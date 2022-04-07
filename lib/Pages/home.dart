@@ -9,6 +9,7 @@ import 'package:my_portofolio/widget/Responsive.dart';
 import 'package:my_portofolio/widget/drawer.dart';
 import 'package:my_portofolio/widget/home_body.dart';
 import 'package:universal_html/html.dart' as html;
+import 'package:get/get.dart' hide Trans;
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -18,21 +19,10 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  _checkPlatform() {
-    if (Platform.isAndroid) {
-      print("android");
-    } else if (Platform.isIOS) {
-      print("ios");
-    } else if (kIsWeb) {
-      print("web");
-    }
-  }
-
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    // _checkPlatform();
   }
 
   @override
@@ -41,16 +31,22 @@ class _HomeScreenState extends State<HomeScreen> {
       if (context.locale.toString() == "en") {
         print("object");
         await context.setLocale(Locale("id"));
+        Get.updateLocale(Locale("id"));
         if (kIsWeb) {
           html.window.location.reload();
         }
-        setState(() {});
+        setState(() {
+          context.setLocale(Locale("id"));
+        });
       } else if (context.locale.toString() == "id") {
         await context.setLocale(Locale("en"));
+        Get.updateLocale(Locale("en"));
         if (kIsWeb) {
           html.window.location.reload();
         }
-        setState(() {});
+        setState(() {
+          context.setLocale(Locale("en"));
+        });
         print("232323");
       }
       setState(() {});
