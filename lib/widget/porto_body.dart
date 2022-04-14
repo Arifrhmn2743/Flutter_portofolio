@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portofolio/Tools/const.dart';
 import 'package:my_portofolio/widget/Responsive.dart';
@@ -26,23 +27,28 @@ class _PortoBodyState extends State<PortoBody> {
           ),
           SizedBox(height: 20),
           Container(
-            width: 300,
-            height: 300,
-            child: ListView.separated(
-                padding: EdgeInsets.symmetric(horizontal: 24.0),
-                scrollDirection: ResponsiveWidget.isSmallScreen(context)
-                    ? Axis.horizontal
-                    : Axis.vertical,
-                shrinkWrap: true,
-                itemBuilder: (BuildContext context, int index) {
-                  return Portois(house: StaticPorto.porto[index]);
+            width: screenSize.width,
+            height: 450,
+            child: ScrollConfiguration(
+              behavior: ScrollConfiguration.of(context).copyWith(
+                dragDevices: {
+                  PointerDeviceKind.touch,
+                  PointerDeviceKind.mouse,
                 },
-                separatorBuilder: (BuildContext context, int index) {
-                  return SizedBox(
-                    width: 30.0,
-                  );
-                },
-                itemCount: StaticPorto.porto.length),
+              ),
+              child: ListView.separated(
+                  padding: EdgeInsets.symmetric(horizontal: 24.0),
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Portois(house: StaticPorto.porto[index]);
+                  },
+                  separatorBuilder: (BuildContext context, int index) {
+                    return SizedBox(
+                      width: 30.0,
+                    );
+                  },
+                  itemCount: StaticPorto.porto.length),
+            ),
           )
         ],
       ),

@@ -5,5 +5,7 @@ abstract class  LocaleKeys {
   static const technical_skill = 'technical_skill';
   static const experience = 'experience';
   static const contacts = 'contacts';
+  static const himas_desc = 'himas_desc';
+  static const hinus_desc = 'hinus_desc';
 
 }

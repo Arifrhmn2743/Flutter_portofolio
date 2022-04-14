@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portofolio/Models/porto_model.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Portois extends StatelessWidget {
   final Porto house;
@@ -10,8 +11,8 @@ class Portois extends StatelessWidget {
     return GestureDetector(
       onTap: () {},
       child: Container(
-        height: 300,
-        width: 250,
+        height: 500,
+        width: 300,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12.0),
           color: Color(0xFFF4F5F6),
@@ -21,6 +22,7 @@ class Portois extends StatelessWidget {
           children: [
             Expanded(
               child: Container(
+                height: 250,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12.0),
                   image: DecorationImage(
@@ -61,21 +63,38 @@ class Portois extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      RichText(
-                        text: TextSpan(
-                          children: [
-                            // TextSpan(
-                            //   text: house.price + " /Night",
-                            //   style: TextStyle(
-                            //     fontFamily: "Sofia",
-                            //     color: Color(0xFF76C893),
-                            //     fontWeight: FontWeight.w600,
-                            //     fontSize: 18.0,
-                            //   ),
-                            // ),
-                          ],
-                        ),
-                      ),
+                      house.google == true
+                          ? ElevatedButton(
+                              onPressed: () async {
+                                if (await canLaunch(house.urlGoogle)) {
+                                  await launch(
+                                    house.urlGoogle,
+                                    forceSafariVC: true,
+                                    forceWebView: true,
+                                    webOnlyWindowName: '_blank',
+                                  );
+                                } else {
+                                  throw 'Could not launch ${house.urlGoogle}';
+                                }
+                              },
+                              child: Text("Google Play Store"))
+                          : SizedBox(),
+                      house.app == true
+                          ? ElevatedButton(
+                              onPressed: () async {
+                                if (await canLaunch(house.urlApp)) {
+                                  await launch(
+                                    house.urlApp,
+                                    forceSafariVC: true,
+                                    forceWebView: true,
+                                    webOnlyWindowName: '_blank',
+                                  );
+                                } else {
+                                  throw 'Could not launch ${house.urlApp}';
+                                }
+                              },
+                              child: Text("App Store"))
+                          : SizedBox()
                     ],
                   )
                 ],
