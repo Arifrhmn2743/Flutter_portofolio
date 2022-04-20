@@ -7,5 +7,8 @@ abstract class  LocaleKeys {
   static const contacts = 'contacts';
   static const himas_desc = 'himas_desc';
   static const hinus_desc = 'hinus_desc';
+  static const mgs_desc = 'mgs_desc';
+  static const capsule_desc = 'capsule_desc';
+  static const simat_desc = 'simat_desc';
 
 }

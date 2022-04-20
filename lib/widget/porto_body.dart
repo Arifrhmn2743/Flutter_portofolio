@@ -28,7 +28,7 @@ class _PortoBodyState extends State<PortoBody> {
           SizedBox(height: 20),
           Container(
             width: screenSize.width,
-            height: 450,
+            height: screenSize.height / 1.4,
             child: ScrollConfiguration(
               behavior: ScrollConfiguration.of(context).copyWith(
                 dragDevices: {

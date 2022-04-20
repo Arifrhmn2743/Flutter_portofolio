@@ -12,7 +12,8 @@ class StaticPorto {
         google: true,
         urlApp: "",
         urlGoogle:
-            "https://play.google.com/store/apps/details?id=com.hijrahnuswantara.hijrah_merchants"),
+            "https://play.google.com/store/apps/details?id=com.hijrahnuswantara.hijrah_merchants",
+        urlGallery: ""),
     Porto(
         name: "Hijrah Nuswantara",
         desc: LocaleKeys.hinus_desc.tr(),
@@ -21,32 +22,36 @@ class StaticPorto {
         google: true,
         urlApp: "",
         urlGoogle:
-            "https://play.google.com/store/apps/details?id=sps.hijrah.com"),
+            "https://play.google.com/store/apps/details?id=sps.hijrah.com",
+        urlGallery: ""),
     Porto(
         name: "MGS (My Golf Statistic)",
-        desc: "desc",
+        desc: LocaleKeys.mgs_desc.tr(),
         img: 'assets/images/mgs.png',
         app: true,
         google: true,
         urlApp:
             "https://apps.apple.com/id/app/my-golf-statistic-mgs/id1596619628?l=id",
         urlGoogle:
-            "https://play.google.com/store/apps/details?id=com.mygolfstatistics.app"),
+            "https://play.google.com/store/apps/details?id=com.mygolfstatistics.app",
+        urlGallery: "https://photos.app.goo.gl/QmHEiAQGToUw4wnq5"),
     Porto(
         name: "Capsule Bus Monitoring System",
-        desc: "desc",
+        desc: LocaleKeys.capsule_desc.tr(),
         img: "assets/images/capsule.png",
         app: false,
         google: false,
         urlApp: "",
-        urlGoogle: ""),
+        urlGoogle: "",
+        urlGallery: "https://photos.app.goo.gl/hg2fa6G438vFf4Mo8"),
     Porto(
         name: "SIMAT",
-        desc: "desc",
+        desc: LocaleKeys.simat_desc.tr(),
         img: 'assets/images/simat.png',
         app: false,
         google: false,
         urlApp: "",
-        urlGoogle: "")
+        urlGoogle: "",
+        urlGallery: "https://photos.app.goo.gl/RT3aWHSrZjpBfppNA")
   ];
 }

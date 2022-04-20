@@ -4,5 +4,8 @@
   "experience": "Pengalaman",
   "contacts": "Kontak",
   "himas_desc": "Hijrah Masjid berfungsi sebagai aplikasi mobile untuk membangun ekosistem masjid sebagai pusat ekonomi ummat Islam",
-  "hinus_desc": "Aplikasi Hijrah Nuswantara adalah aplikasi penggalangan donasi yang mengkhususkan membantu masjid di seluruh penjuru negeri, dari Masjid yang terdekat hingga Masjid yang jauh dari jangkauanmu."
+  "hinus_desc": "Hijrah Nuswantara adalah aplikasi penggalangan donasi yang mengkhususkan membantu masjid di seluruh penjuru negeri, dari Masjid yang terdekat hingga Masjid yang jauh dari jangkauanmu.",
+  "mgs_desc": "My Golf Statistic adalah aplikasi mobile untuk membantu mengelola dan mendapatkan info tentang permainan golf user. Beberapa fitur yang terdapat di aplikasi ini adalah: Bergabung dengan komunitas, Mendaftar Kompetisi, Mencari fasilias dan lapangan golf terdekat ",
+  "capsule_desc": "Capsule Bus Monitoring System adalah aplikasi mobile yang saya dan tim buat dengan menggunakan Java untuk Android, dengan fungsi untuk membantu tugas suster dan mekanik untuk memantau kondisi supir bus dan pengecekan kondisi mesin bus setiap hari",
+  "simat_desc": "SIMAT adalah sebuah aplikasi desktop yang saya dan tim buat menggunakan Visual Studio 2015 sebagai proyek magang, dengan tujuan untuk mencatat semua transaksi asset tidak bergerak"
 }

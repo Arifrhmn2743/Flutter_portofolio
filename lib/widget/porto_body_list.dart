@@ -11,7 +11,7 @@ class Portois extends StatelessWidget {
     return GestureDetector(
       onTap: () {},
       child: Container(
-        height: 500,
+        // height: 500,
         width: 300,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12.0),
@@ -20,15 +20,34 @@ class Portois extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded(
-              child: Container(
-                height: 250,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12.0),
-                  image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: AssetImage(
-                      house.img,
+            MouseRegion(
+              cursor: house.urlGallery != ""
+                  ? SystemMouseCursors.click
+                  : SystemMouseCursors.basic,
+              child: GestureDetector(
+                onTap: () async {
+                  if (await canLaunch(house.urlGallery)) {
+                    await launch(
+                      house.urlGallery,
+                      forceSafariVC: true,
+                      forceWebView: true,
+                      webOnlyWindowName: '_blank',
+                    );
+                  } else {
+                    throw 'Could not launch ${house.urlGallery}';
+                  }
+                },
+                child: Expanded(
+                  child: Container(
+                    height: 250,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12.0),
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage(
+                          house.img,
+                        ),
+                      ),
                     ),
                   ),
                 ),

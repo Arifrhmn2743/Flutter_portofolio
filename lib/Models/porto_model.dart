@@ -6,6 +6,7 @@ class Porto {
   final bool app;
   final String urlGoogle;
   final String urlApp;
+  final String urlGallery;
 
   Porto(
       {required this.name,
@@ -14,5 +15,6 @@ class Porto {
       required this.app,
       required this.google,
       required this.urlApp,
-      required this.urlGoogle});
+      required this.urlGoogle,
+      required this.urlGallery});
 }

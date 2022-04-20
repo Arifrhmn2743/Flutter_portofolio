@@ -4,5 +4,8 @@
   "experience": "Experience",
   "contacts": "Contacts",
   "himas_desc": "Hijrah Masjid serves as a mobile apps to bulid a Mosque ecosistem as the economic center of the Islamic community",
-  "hinus_desc": "The Hijrah Nuswantara application is a donation-raising application that specializes in helping mosque throughout the country, from the nearest mosque to mosques that are far from your reach."
+  "hinus_desc": "Hijrah Nuswantara is a donation-raising application that specializes in helping mosque throughout the country, from the nearest mosque to mosques that are far from your reach.",
+  "mgs_desc": "My Golf Statistic is a mobile application to help manage and getting info about users golf game. Some of the features are: Joining community, Joining competitions, Nearby golf courses and facilities",
+  "capsule_desc": "Capsule Bus Monitoring System is a mobile app that me and my teams build usingJava for Andorid, for the purpose of helping nurses and mechanic to maintaining the bus driver health and checking bus condition everyday",
+  "simat_desc": "SIMAT is a desktop apps that me and my teams build with Visual Studio 2015 as an internship project, for the purpose of recording all immovable asset transaction "
 }
