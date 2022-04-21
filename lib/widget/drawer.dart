@@ -49,6 +49,20 @@ class _SmallDrawerState extends State<SmallDrawer> {
               InkWell(
                 onTap: () {},
                 child: Text(
+                  "My Portofolio",
+                  style: TextStyle(color: Colors.white, fontSize: 22),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                child: Divider(
+                  color: Colors.blueGrey[400],
+                  thickness: 2,
+                ),
+              ),
+              InkWell(
+                onTap: () {},
+                child: Text(
                   LocaleKeys.contacts.tr(),
                   style: TextStyle(color: Colors.white, fontSize: 22),
                 ),
@@ -65,15 +79,18 @@ class _SmallDrawerState extends State<SmallDrawer> {
                             fontSize: 14,
                           ),
                         ),
-                        GestureDetector(
-                          onTap: () {
-                            _launchURL();
-                          },
-                          child: Text(
-                            'sbis04.github.io',
-                            style: TextStyle(
-                              color: Colors.blueGrey[300],
-                              fontSize: 14,
+                        MouseRegion(
+                          cursor: SystemMouseCursors.click,
+                          child: GestureDetector(
+                            onTap: () {
+                              _launchURL();
+                            },
+                            child: Text(
+                              'sbis04.github.io',
+                              style: TextStyle(
+                                color: Colors.blueGrey[300],
+                                fontSize: 14,
+                              ),
                             ),
                           ),
                         ),

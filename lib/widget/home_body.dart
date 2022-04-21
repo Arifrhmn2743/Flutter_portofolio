@@ -7,6 +7,7 @@ import 'package:my_portofolio/translate/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:my_portofolio/widget/Responsive.dart';
 import 'package:my_portofolio/widget/about_body.dart';
+import 'package:my_portofolio/widget/bottom_body.dart';
 import 'package:my_portofolio/widget/porto_body.dart';
 
 class HomeBody extends StatefulWidget {
@@ -39,7 +40,7 @@ class _HomeBodyState extends State<HomeBody> {
       controller: _scrollController,
       physics: ClampingScrollPhysics(),
       child: Column(
-        children: const [AboutBody(), PortoBody()],
+        children: const [AboutBody(), PortoBody(), BottomBody()],
       ),
     );
   }
