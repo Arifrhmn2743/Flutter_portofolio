@@ -30,7 +30,55 @@ class _BottomBodyState extends State<BottomBody> {
               LocaleKeys.contacts.tr(),
               style: blueTitleSpaceStyle,
             ),
-            Text("data"),
+            SizedBox(
+              height: 10,
+            ),
+            Row(
+              children: [
+                Image.asset(
+                  'assets/images/link.png',
+                  width: 25,
+                  height: 25,
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Text(
+                  "LinkedIn",
+                  style: whiteTextStyle,
+                )
+              ],
+            ),
+            Row(
+              children: const [
+                Icon(
+                  Icons.email,
+                  color: Colors.white,
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Text(
+                  "Email",
+                  style: whiteTextStyle,
+                )
+              ],
+            ),
+            Row(
+              children: const [
+                Icon(
+                  Icons.email,
+                  color: Colors.white,
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Text(
+                  "Email",
+                  style: whiteTextStyle,
+                )
+              ],
+            )
           ],
         ),
       ),

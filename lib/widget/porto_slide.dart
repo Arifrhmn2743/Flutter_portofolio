@@ -8,9 +8,9 @@ class StaticPorto {
         name: "Hijrah Masjid",
         desc: LocaleKeys.himas_desc.tr(),
         img: 'assets/images/himas.png',
-        app: false,
+        app: true,
         google: true,
-        urlApp: "",
+        urlApp: "https://apps.apple.com/id/app/hijrahmasjid/id1573349690",
         urlGoogle:
             "https://play.google.com/store/apps/details?id=com.hijrahnuswantara.hijrah_merchants",
         urlGallery: ""),
