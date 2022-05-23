@@ -3,6 +3,7 @@ import 'package:my_portofolio/Tools/const.dart';
 import 'package:my_portofolio/translate/locale_keys.g.dart';
 import 'package:my_portofolio/widget/Responsive.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class BottomBody extends StatefulWidget {
   const BottomBody({Key? key}) : super(key: key);
@@ -12,6 +13,13 @@ class BottomBody extends StatefulWidget {
 }
 
 class _BottomBodyState extends State<BottomBody> {
+  final String _url = "https://www.linkedin.com/in/arifrahman2743/";
+  final String _email1 = "mailto:arifrhmn2743@gmail.com";
+  final String _email2 = "mailto:arifrahman.navi@gmail.com";
+  void _launchURL(String url) async {
+    if (!await launch(url)) throw 'Could not launch $url';
+  }
+
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
@@ -43,14 +51,22 @@ class _BottomBodyState extends State<BottomBody> {
                 SizedBox(
                   width: 10,
                 ),
-                Text(
-                  "LinkedIn",
-                  style: whiteTextStyle,
+                MouseRegion(
+                  cursor: SystemMouseCursors.click,
+                  child: GestureDetector(
+                    onTap: () {
+                      _launchURL(_url);
+                    },
+                    child: Text(
+                      "LinkedIn",
+                      style: whiteTextStyle,
+                    ),
+                  ),
                 )
               ],
             ),
             Row(
-              children: const [
+              children: [
                 Icon(
                   Icons.email,
                   color: Colors.white,
@@ -58,14 +74,22 @@ class _BottomBodyState extends State<BottomBody> {
                 SizedBox(
                   width: 10,
                 ),
-                Text(
-                  "Email",
-                  style: whiteTextStyle,
+                MouseRegion(
+                  cursor: SystemMouseCursors.click,
+                  child: GestureDetector(
+                    onTap: () {
+                      _launchURL(_email1);
+                    },
+                    child: Text(
+                      "Email",
+                      style: whiteTextStyle,
+                    ),
+                  ),
                 )
               ],
             ),
             Row(
-              children: const [
+              children: [
                 Icon(
                   Icons.email,
                   color: Colors.white,
@@ -73,9 +97,17 @@ class _BottomBodyState extends State<BottomBody> {
                 SizedBox(
                   width: 10,
                 ),
-                Text(
-                  "Email",
-                  style: whiteTextStyle,
+                MouseRegion(
+                  cursor: SystemMouseCursors.click,
+                  child: GestureDetector(
+                    onTap: () {
+                      _launchURL(_email2);
+                    },
+                    child: Text(
+                      "Email",
+                      style: whiteTextStyle,
+                    ),
+                  ),
                 )
               ],
             )
